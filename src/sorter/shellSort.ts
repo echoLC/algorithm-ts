@@ -9,7 +9,7 @@ function shellSort(data: Array<number> | unknown): Array<number> {
   }
 
   while (h >= 1) {
-    for (let i = 0; i < h; i++) {
+    for (let i = 0; i < len; i++) {
       for (let j = i; j >= h && data[j] < data[j - h]; j -= h) {
         let min = data[j]
         data[j] = data[j - h]
