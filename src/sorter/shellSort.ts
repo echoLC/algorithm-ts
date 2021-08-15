@@ -1,5 +1,5 @@
 // 希尔排序
-function shellSort(data: Array<number> | unknown): Array<number> {
+export default function shellSort(data: Array<number> | unknown): Array<number> {
   if (!Array.isArray(data)) throw new Error('Input muse be an Array')
 
   const len = data.length

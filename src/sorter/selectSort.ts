@@ -1,4 +1,4 @@
-function selectSort(data: Array<number> | unknown): Array<number> {
+export default function selectSort(data: Array<number> | unknown): Array<number> {
   if (!Array.isArray(data)) throw new Error('Input muse be an Array')
 
   for (let i = 0; i < data.length; i++) {
