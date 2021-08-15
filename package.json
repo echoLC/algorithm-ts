@@ -1,0 +1,8 @@
+{
+  "name": "algorithm-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/echoLC/algorithm-ts.git",
+  "author": "luochao <luochao@joyy.sg>",
+  "license": "MIT"
+}
