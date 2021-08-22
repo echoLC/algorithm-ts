@@ -24,7 +24,6 @@ export default function threeWayQuickSort(
     } else if (arr[i] > v) {
       swap(arr, i, gt)
       gt--
-      i++
     } else {
       i++
     }
