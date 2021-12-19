@@ -1,4 +1,4 @@
 declare class ListNode<T = any> {
-  data: T
+  val: T
   next: ListNode | null
 }
