@@ -10,4 +10,5 @@ const reverseList = (head: ListNode | null) => {
     pre = cur
     cur = next
   }
+  return pre
 }
