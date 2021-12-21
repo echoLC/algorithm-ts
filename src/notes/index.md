@@ -6,4 +6,5 @@
 
 ## 索引
 - [链表](./linkNode.md)
+- [栈](./stack.md)
 - [队列](./queue.md)
