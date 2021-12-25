@@ -56,7 +56,7 @@
 通用排序算法举例：
 - C 语言中的 `qsort()` 实现，qsort() 会优先使用归并排序来排序输入数据，要排序的数据量比较大的时候，qsort() 会改为用快速排序算法来排序，qsort() 选择分区点的方法就是“三数取中法”；qsort() 并不仅仅用到了归并排序和快速排序，它还用到了插入排序。在快速排序的过程中，当要排序的区间中，元素的个数小于等于 4 时，qsort() 就退化为插入排序。在 qsort() 插入排序的算法实现中，利用了[哨兵（哨兵模式是一种简化代码的编程技巧，用来优化边界问题）](../algorithm/trick/guard.ts)这种编程技巧。虽然哨兵可能只是少做一次判断，但是毕竟排序函数是非常常用、非常基础的函数，性能的优化要做到极致。
 
-- JavaScript 中的 sort 实现。
+- JavaScript 中的 sort 实现，每个浏览器之间的实现会有差异，Mozilla 浏览器使用的是合并排序实现，Chrome 使用的是快排和插入排序。参考链接：[Javascript Array.sort implementation](https://stackoverflow.com/questions/234683/javascript-array-sort-implementation)。
 
 ## 算法实现
 - [冒泡排序](../algorithm/sorter/bubbleSort.ts)
