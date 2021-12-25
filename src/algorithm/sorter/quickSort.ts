@@ -3,7 +3,7 @@ export default function quickSort(arr: Array<number>): Array<number> {
   if (arr.length <= 1) return arr
 
   const pivotIndex = Math.floor(arr.length / 2)
-  const pivot = arr[pivotIndex]
+  const pivot = arr.splice(pivotIndex, 1)[0]
 
   const left: number[] = []
   const right: number[] = []
