@@ -51,7 +51,7 @@ export function binarySearch2(arr: number[], target: number) {
     } else if (arr[mid] < target) {
       low = mid + 1;
     } else {
-      if (mid === 0 || arr[mid + 1] !== target) {
+      if (mid === arr.length - 1 || arr[mid + 1] !== target) {
         return mid;
       } else {
         low = mid + 1;
