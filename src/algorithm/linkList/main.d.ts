@@ -1,4 +1,5 @@
 declare class ListNode<T = any> {
-  val: T
-  next: ListNode | null
+  constructor(val?: T, next?: ListNode);
+  val: T;
+  next: ListNode | null;
 }
