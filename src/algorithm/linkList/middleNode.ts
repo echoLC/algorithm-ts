@@ -1,11 +1,11 @@
-// 寻找链表的中间节点
+// 寻找链表的中间节点 快慢指针
 function middleNode(head: ListNode | null): ListNode | null {
-  if (head == null || head.next == null) return head
-  let fast: ListNode | null = head
-  let slow: ListNode | null = head
+  if (head == null || head.next == null) return head;
+  let fast: ListNode | null = head;
+  let slow: ListNode | null = head;
   while (fast && fast.next) {
-    fast = fast.next.next
-    slow = slow ? slow.next : null
+    fast = fast.next.next;
+    slow = slow ? slow.next : null;
   }
-  return slow
+  return slow;
 }
