@@ -1,5 +1,5 @@
 // 找出单向链表中倒数第 k 个节点，返回该节点的值-- 快慢节点
-function kThToLast(head: ListNode | null, k) {
+function kThToLast(head: ListNode | null, k: number) {
   let fast = head;
   let slow = head;
 
@@ -17,7 +17,7 @@ function kThToLast(head: ListNode | null, k) {
 }
 
 // 找出单向链表中倒数第 k 个节点，返回该节点的值-- 迭代
-function kThToLast1(head: ListNode | null, k) {
+function kThToLast1(head: ListNode | null, k: number) {
   const getLen = (head: ListNode | null) => {
     let len = 0;
     while (head) {

@@ -1,4 +1,4 @@
-// 删除链表倒数最后一个元素
+// 删除链表倒数第 N 个元素
 const removeNthFromEnd = function (head: ListNode | null, n: number) {
   if (head == null || head.next == null) return null;
 
@@ -26,3 +26,29 @@ const removeNthFromEnd = function (head: ListNode | null, n: number) {
 
   return dummyHead.next;
 };
+
+
+// 双指针
+function removeNthFromEnd1(head: ListNode | null, n: number) {
+  let fast = head
+
+  for (let i = 0; i < n; i++) {
+    fast = fast?.next ?? null
+  }
+
+  let dummy = new ListNode(-1)
+  dummy.next = head
+
+  let slow: ListNode | null = dummy
+
+  while(fast) {
+    fast = fast.next
+    slow = slow?.next ?? null
+  }
+
+  if (slow) {
+    slow.next = slow?.next?.next ?? null
+  }
+
+  return dummy.next
+}
