@@ -26,3 +26,28 @@ function buildTree(preorder: number[], inorder: number[]) {
 
   return build(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1)
 }
+
+// 从中序遍历与后序序列构造二叉树
+function buildTree1 (inorder: number[], postorder: number[]) {
+  const valueToIndex = new Map<number, number>()
+
+  for (let i = 0; i < inorder.length; i++) {
+    valueToIndex.set(inorder[i], i)
+  }
+
+  const build = (inorder: number[], inStart: number, inEnd: number, postorder: number[], postStart: number, postEnd: number) => {
+    if (inStart > inEnd) return null
+
+    const rootVal = postorder[postEnd]
+    const index = valueToIndex.get(rootVal) ?? 0
+    const leftSize = index - inStart
+
+    const root = new TreeNode(rootVal)
+    root.left = build(inorder, inStart, index - 1, postorder, postStart, postStart + leftSize - 1)
+    root.right = build(inorder, index + 1, inEnd, postorder, postStart + leftSize , postEnd - 1)
+
+    return root
+  }
+
+  return build(inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1)
+}
