@@ -1,15 +1,15 @@
 function isPalindrome(s: string) {
-  let left = 0
-  let right = 0
+  let left = 0;
+  let right = s.length - 1;
 
-  while(left < right) {
+  while (left < right) {
     if (s.charAt(left) !== s.charAt(right)) {
-      return false
+      return false;
     }
 
-    left++
-    right--
+    left++;
+    right--;
   }
 
-  return true
+  return true;
 }
