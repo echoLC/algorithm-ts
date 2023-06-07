@@ -17,7 +17,7 @@ class Difference {
     }
   }
 
-  increment(i, j, val) {
+  increment(i: number, j: number, val: number) {
     this.diff[i] += val;
 
     if (j + 1 < this.diff.length) {
@@ -26,7 +26,7 @@ class Difference {
   }
 
   result() {
-    const res = new Array(this.diff.length);
+    const res: number[] = new Array(this.diff.length);
 
     res[0] = this.diff[0];
 
@@ -39,7 +39,7 @@ class Difference {
 }
 
 function getModifiedArray(length: number, updates: number[][]) {
-  const list = new Array(length).fill(0);
+  const list: number[] = new Array(length).fill(0);
 
   const diff = new Difference(list);
 
